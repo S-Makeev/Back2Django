@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -9,44 +10,155 @@
   <script src='main.js'></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300&display=swap" rel="stylesheet">
-  
 
-  <style> 
-    body{
-        background-color: rgb(121, 182, 244);
-        font-family: 'Noto Sans', sans-serif;
-        padding-top: 50px;
+
+  <style>
+    body {
+      background-color: rgb(245, 251, 251);
+      font-family: 'Noto Sans', sans-serif;
+      padding-top: 50px;
     }
-
 
     h1,
     h2,
     h3,
     h4,
     h5,
-    h6{
+    h6 {
       font-family: 'Raleway', sans-serif;
     }
-    
-    a, 
-    p{
-      color:rgb(111, 111, 111)
+
+    a,
+    p {
+      color: rgb(111, 111, 111)
     }
 
-    .container{
-      max-width:550px;
-      margin:auto;
-      background-color: whitesmoke;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.3), 2px -2px 5px rgba(0, 0, 0, 0.3), -2px 2px 5px rgba(0, 0, 0, 0.3);
+    .container {
+      max-width: 550px;
+      margin: auto;
+      background-color: #fff;
+      -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+      box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
     }
 
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      color: rgba(246, 244, 241, 0.832);
+      padding: 10px;
+      border-radius: 5px 5px 0 0;
+      background: linear-gradient(90deg, #a3d77b 0%, #66b239 43%, #4f9c14 100%);
+    }
+
+    .header-bar a {
+      color: #ffff;
+      text-decoration: none;
+    }
+
+    .task-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      border-top: 1px solid #dfe4ea;
+      overflow: hidden;
+    }
+
+    .task-title {
+      display: flex;
+      padding: 20px;
+    }
+
+    .task-title a {
+      text-decoration: none;
+      color: #4b5156;
+      margin-left: 10px;
+    }
+
+    .task-complete-icon {
+      height: 20px;
+      width: 20px;
+      background-color: rgb(105, 192, 105);
+      border-radius: 50%;
+    }
+
+    .task-incomplete-icon {
+      height: 20px;
+      width: 20px;
+      background-color: rgb(255, 135, 36);
+      border-radius: 50%;
+    }
+
+    .delete-link {
+      text-decoration: none;
+      font-weight: 900;
+      color: #cf4949;
+      font-size: 22px;
+      line-height: 0;
+      padding: 20px 5px;
+    }
+
+
+
+    #add-link {
+      color: #43b938;
+      text-decoration: none;
+      font-size: 25px;
+      text-shadow: 1px 1px #81413b;
+    }
+
+    #search-add-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+
+    input[type=text],
+    input[type=password],
+    textarea {
+      border: 1px solid #757575;
+      border-radius: 5px;
+      padding: 10px;
+      width: 90%;
+    }
+
+    label {
+      padding-top: 10px !important;
+      display: block;
+    }
+
+    ::placeholder {
+      font-weight: 300;
+      opacity: 0.5;
+    }
+
+    .button {
+      border: 1px solid #757575;
+      background-color: #FFF;
+      color: #EB796F;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
   </style>
 </head>
-<body>
-    <div class="container">
-        {% block content %}
 
-        {% endblock content%}
-    </div>
+
+
+<body>
+  <div class="container">
+    {% block content %}
+
+    {% endblock content%}
+  </div>
 </body>
+
 </html>
